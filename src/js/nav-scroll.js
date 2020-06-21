@@ -1,6 +1,6 @@
 jQuery(document).ready(function ($) {
     //dynamic scroll to top link
-    $link = '<a href= "#top" class="top"> &uarr;</a>';
+    $link = '<a href= "#top" class="top">&uarr;</a>';
     $('body').append($link);
     $('.top').hide();
     $(window).scroll(function () {
