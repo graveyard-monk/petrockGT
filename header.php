@@ -53,16 +53,16 @@
 	</button>
 	<?php
 	wp_nav_menu([
-		'menu' => 'primary',
-		'theme_location' => 'primary',
-		'container' => 'div',
-		'container_id' => 'bs4navbar',
-		'container_class' => 'collapse navbar-collapse',
-		'menu_id' => 'main-menu',
-		'menu_class' => 'navbar-nav ml-auto',
-		'depth'		=> 2,
-		'fallback_cb'	=>'bs4navwalker::fallback',
-		'walker'		=> new bs4navwalker()
+		'menu' 		=> 'primary',
+		'theme_location'	 => 'primary',
+		'container' 	 	 => 'div',
+		'container_id'	 	 => 'bs4navbar',
+		'container_class'    => 'collapse navbar-collapse',
+		'menu_id'		 	 => 'main-menu',
+		'menu_class'		 => 'navbar-nav ml-auto',
+		'depth'				 => 2,
+		'fallback_cb'		 =>'bs4navwalker::fallback',
+		'walker'			 => new bs4navwalker()
 	]);
 	?>
 	</nav>
