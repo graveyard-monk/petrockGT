@@ -473,6 +473,10 @@ hr {
 	margin-bottom: 1.5em;
 }
 
+.site-info {
+	text-align: center;
+}
+
 h1.site-title, p.site-title {
 	margin: 10px 0 0 -2px;
 	padding: 0;
@@ -487,6 +491,16 @@ h1.site-title, p.site-title {
 
 .site-title a:hover {
 	text-decoration: none;
+}
+
+.site-description {
+	font-size: 16px;
+	margin: 10px 00;
+	letter-spacing: 1px;
+}
+
+#masthead {
+	margin-bottom: 30px;
 }
 
 ul,
@@ -532,11 +546,36 @@ figure {
 	margin: 1em 0;
 }
 
+.cat-links, .tags-links {
+	margin-right: 5px;
+}
+
+.cat-links a, .tags-links a, .edit-link a {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #2980b9;	
+}
+
+.cat-links a:focus, .cat-links a:hover, .tags-links a:focus, .tags-links a:hover, .edit-link a:focus, edit-link a:hover {
+border-bottom: solid 1px #2980b9;	
+}
+
+.edit-link {
+	margin-left: 5px;
+}
+
 table {
 	margin: 0 0 1.5em;
 	width: 100%;
 }
 
+h1.entry-title, h2.entry-title {
+	margin-top: 1em;
+}
+
+footer {
+	margin-top: 20px;
+}
 /* Links
 --------------------------------------------- */
 a {
@@ -638,6 +677,8 @@ textarea:focus {
 
 select {
 	border: 1px solid #ccc;
+	padding: 10px;
+	width: 100%;
 }
 
 textarea {
@@ -654,73 +695,6 @@ textarea {
 
 /* Navigation
 --------------------------------------------- */
-.main-navigation {
-	display: block;
-	width: 100%;
-}
-
-.main-navigation ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
-
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	display: block;
-	left: auto;
-}
-
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-}
-
-.main-navigation li {
-	position: relative;
-}
-
-.main-navigation a {
-	display: block;
-	text-decoration: none;
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-
-	.menu-toggle {
-		display: none;
-	}
-
-	.main-navigation ul {
-		display: flex;
-	}
-}
-
 .site-main .comment-navigation,
 .site-main
 .posts-navigation,
@@ -746,6 +720,56 @@ textarea {
 .post-navigation .nav-next {
 	text-align: end;
 	flex: 1 0 50%;
+}
+
+.navbar {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.open > .dropdown-menu {
+	-webkit-transform: scale(1,1);
+			transform: scale(1,1);
+			opacity: 1;
+}
+
+.dropdown-menu {
+	margin-top: 0;
+	opacity: .5;
+	-webkit-transform-origin: top;
+	transform-origin: top;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	-webkit-transform: scale(1, 0);
+	transition: all 0.3s linear;
+}
+
+.dropdown-toggle::after {
+	vertical-align: .150em;
+}
+
+.top, .top:link {
+	color:#fff;
+	background: #333;
+	position: fixed;
+	z-index: 999;
+	bottom: 20px;
+	right: 20px;
+	width: 40px;
+	height: 40px;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 40px;
+	text-align: center;
+	text-transform: uppercase;
+	opacity: .9;
+	border: none;
+}
+
+.top:hover {
+opacity: 1;
+text-decoration: none;
+
 }
 
 /* Posts and pages
@@ -793,6 +817,24 @@ textarea {
 .widget select {
 	max-width: 100%;
 }
+
+/* Tag Cloud
+--------------------------------------------- */
+.tagcloud a {
+	border: 1px solid;
+	border-radius: 2px;
+	display: inline-block;
+	line-height: 1;
+	margin: 0 2px 5px 0;
+	padding: 5px;
+	text-decoration: none;
+}
+
+.tagcloud a:hover, .tagcloud a:focused {
+	color: #21759b;
+	outline: 0;
+}
+
 
 /* Media
 --------------------------------------------- */

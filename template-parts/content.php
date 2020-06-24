@@ -33,6 +33,7 @@
 
 	<div class="entry-content">
 		<?php
+		if ( is_single() ) {
 		the_content(
 			sprintf(
 				wp_kses(
@@ -47,6 +48,9 @@
 				wp_kses_post( get_the_title() )
 			)
 		);
+	} else {
+		the_excerpt();
+	}
 
 		wp_link_pages(
 			array(
@@ -61,3 +65,4 @@
 		<?php petrock_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
+<hr>
