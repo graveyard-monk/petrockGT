@@ -17,16 +17,12 @@ Use it to make something cool, have fun, and share what you've learned.
 
 PetrockGT is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 */
 
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Generic
-	- Normalize
 	- Box sizing
 # Base
 	- Typography
@@ -53,11 +49,6 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 # Generic
 --------------------------------------------------------------*/
-
-/* Normalize
---------------------------------------------- */
-
-/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
 	 ========================================================================== */
@@ -480,6 +471,22 @@ hr {
 	border: 0;
 	height: 1px;
 	margin-bottom: 1.5em;
+}
+
+h1.site-title, p.site-title {
+	margin: 10px 0 0 -2px;
+	padding: 0;
+	line-height: 1em;
+	font-size: 30px;
+	letter-spacing: 1px;	
+}
+
+.site-title a {
+	margin: 0;
+}
+
+.site-title a:hover {
+	text-decoration: none;
 }
 
 ul,
